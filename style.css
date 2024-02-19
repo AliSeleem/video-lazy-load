@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+
+.circle{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: myfirst 1s linear 0s infinite normal;
+}
+
+@keyframes myfirst {
+    0%{
+        opacity: 0%;
+    }
+
+    50%{
+        opacity: 100%;
+    }
+
+    100%{
+        opacity: 0%;
+    }
+}
+
+.circle:nth-of-type(1){
+    animation-delay: 125ms;
+    transform: translate(-50%, calc(-50% - 60px));
+}
+
+.circle:nth-of-type(2){
+    animation-delay: 250ms;
+    transform: translate(calc(-50% + 40px),calc(-50% - 40px));
+}
+
+.circle:nth-of-type(3){
+    animation-delay: 375ms;
+    transform: translate(calc(-50% + 60px), -50%);
+}
+
+.circle:nth-of-type(4){
+    animation-delay: 500ms;
+    transform: translate(calc(-50% + 40px),calc(-50% + 40px));
+}
+
+.circle:nth-of-type(5){
+    animation-delay: 625ms;
+    transform: translate(-50%, calc(-50% + 60px));
+}
+
+.circle:nth-of-type(6){
+    animation-delay: 750ms;
+    transform: translate(calc(-50% - 40px), calc(-50% + 40px));
+}
+
+.circle:nth-of-type(7){
+    animation-delay: 875ms;
+    transform: translate(calc(-50% - 60px), -50%);
+}
+
+.circle:nth-of-type(8){
+    animation-delay: 1000ms;
+    transform: translate(calc(-50% - 40px), calc(-50% - 40px));
+}
